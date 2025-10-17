@@ -7,10 +7,8 @@ If you have suggestions or find errors, consider contributing via relevant commu
 ⚠️ users should prioritize safety with tools like VPNs and ad blockers. Always verify links, as sites can change or become unsafe.
 
 # Piracy Aggregators
-
 ℹ️ These sites compile links to streaming, downloads, and tools across categories. Focus on ones with active communities for updates amid takedowns.
-
-* [fmhy.net](https://fmhy.net/) 🌟 - A collection of media piracy sites, tools, and guides, with wikis for movies, TV, anime, and sports. Ideal for broad video resources.
+* <a href="https://fmhy.net/" target="_blank" rel="noopener noreferrer">fmhy.net</a> 🌟 - A collection of media piracy sites, tools, and guides, with wikis for movies, TV, anime, and sports. Ideal for broad video resources.
 * [everythingmoe.com](https://everythingmoe.com/) 🌟 - Otaku-focused curator with reviews and lists for anime streaming (77 sites), donghua (21 sites), manga (80 sites), manhwa (48 sites), games (37 sites), apps (70 sites), downloads (44 sites), music (30 sites), and western streaming (9 sites). Includes MULT, DDL, torrent, and NSFW indicators.
 * [thewiki.moe](https://thewiki.moe/) - Wiki-style resource for anime and Japanese media tutorials and guides, with a Discord community for discussions. Limited direct piracy links.
 * [theindex.moe](https://theindex.moe/) - Piracy index for Japanese content like anime and visual novels, focusing on catalogs and comparisons.
