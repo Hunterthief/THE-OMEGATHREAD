@@ -1,6 +1,7 @@
+If you have any suggestions and recommendations or find any errors, feel free to open a request .
 # Piracy Aggregators Megathread
 
-A curated list of major piracy aggregator sites and megathreads for discovering resources like streaming for anime, movies, TV, and more. Items with a 🌟 icon are community favorites based on reliability and comprehensiveness.
+A curated list of major piracy aggregator sites and megathreads for discovering resources like streaming for anime, movies, TV, and more. Items with a 🌟 icon are my personal favorites based on reliability and comprehensiveness.
 
 If you have suggestions or find errors, consider contributing via relevant communities or repositories.
 
