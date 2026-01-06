@@ -1,12 +1,10 @@
 ---
----  # Required front matter for processing
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+---  # Required front matter
 
 body {
   background: #121212;
   color: #e0e0e0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;  # Fallback until HTML load
 }
 
 a {
