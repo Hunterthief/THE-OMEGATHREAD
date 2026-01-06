@@ -1,6 +1,6 @@
 ---
----  // Empty front matter required
-@import "{{ site.theme }}";  // If using a theme; remove if no theme
+--- // Empty front matter required
+@import "{{ site.theme }}"; // If using a theme; remove if no theme
 body { background: #121212; color: #e0e0e0; font-family: 'Roboto', sans-serif; }
 a { color: #ff9800; } /* Orange accents */
 h1, h2 { color: #ff9800; border-bottom: 1px solid #444; }
