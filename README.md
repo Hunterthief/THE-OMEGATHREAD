@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 If you have any suggestions and recommendations or find any errors, feel free to open a request .
 # Piracy Aggregators Megathread
 
