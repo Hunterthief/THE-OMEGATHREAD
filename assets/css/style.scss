@@ -1,9 +1,36 @@
 ---
---- // Empty front matter required
-@import "{{ site.theme }}"; // If using a theme; remove if no theme
-body { background: #121212; color: #e0e0e0; font-family: 'Roboto', sans-serif; }
-a { color: #ff9800; } /* Orange accents */
-h1, h2 { color: #ff9800; border-bottom: 1px solid #444; }
-code { background: #333; }
-.markdown-body { max-width: 900px; margin: auto; padding: 20px; }
-@media (prefers-color-scheme: light) { body { background: #fff; color: #333; } a { color: #f60; } }
+---  # Required front matter
+
+/* No @import needed for overrides on minimal; comment or remove if using Primer */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  background: #121212;
+  color: #e0e0e0;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #ff9800;  /* Orange accents */
+}
+
+h1, h2, h3 {
+  color: #ff9800;
+  border-bottom: 1px solid #444;
+}
+
+code {
+  background: #333;
+}
+
+.markdown-body {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+@media (prefers-color-scheme: light) {
+  body { background: #fff; color: #333; }
+  a { color: #f60; }
+}
