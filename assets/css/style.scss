@@ -1,7 +1,5 @@
 ---
----  # Required front matter
-
-/* No @import needed for overrides on minimal; comment or remove if using Primer */
+---  # Required front matter for processing
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
@@ -22,15 +20,20 @@ h1, h2, h3 {
 
 code {
   background: #333;
+  border-radius: 4px;
+  padding: 2px 6px;
 }
 
 .markdown-body {
   max-width: 900px;
-  margin: auto;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 @media (prefers-color-scheme: light) {
-  body { background: #fff; color: #333; }
+  body {
+    background: #fff;
+    color: #333;
+  }
   a { color: #f60; }
 }
