@@ -27,6 +27,7 @@ If you have suggestions or find errors, consider contributing via relevant commu
 * <a href="https://mediasavvy.pages.dev/" target="_blank" rel="noopener noreferrer">MediaSavvy</a> 🌟 - A quality-focused public wiki for piracy and media management, with guides on torrent clients, formats, VPNs, anonymity tools, and community backups for resilient access.
 * <a href="https://watchfreemoviesandseries.com/" target="_blank" rel="noopener noreferrer">WatchFreeMoviesAndSeries</a> - A streaming hub with 10,000+ movies and TV series, including anime, Bollywood, and documentaries. No registration, multiple servers, daily updates.
 * <a href="https://www.libgen.help/" target="_blank" rel="noopener noreferrer">LibGen Help</a> - Mirror portal for Library Genesis with access to 6M+ books, comics, manga, and academic papers. Searchable by title/author/ISBN, multiple download formats (PDF, EPUB).
+* <a href="https://list.vidpop.xyz/" target="_blank" rel="noopener noreferrer">VidPop List</a> - Curated directory of free streaming sites for movies, TV shows, anime, sports, and documentaries, featuring platforms like 123movies, fmovies, onstream, and watchu. No subscriptions or sign-ups required, with tips for VPN use and JavaScript enabling for full access.
 
 #### Usage Tips
 ℹ️ Cross-reference multiple aggregators for the latest links, as streaming sites often face shutdowns. For anime-specific streaming, prioritize everythingmoe.com or Wotaku.wiki. Use browser extensions like uBlock Origin from the lists for ad-free experiences.
