@@ -118,7 +118,7 @@ em {
   color: var(--text-muted);
 }
 
-/* ===== Links ===== */
+/* ===== Links Only Glow ===== */
 a {
   color: var(--accent);
   text-decoration: none;
@@ -142,7 +142,7 @@ ul, ol {
 
 li {
   margin-bottom: 0.6em;
-  color: var(--text-main);
+  color: var(--text-main); /* text does NOT glow */
   text-shadow: none;
 }
 
