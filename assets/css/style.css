@@ -31,6 +31,7 @@ body {
 }
 
 /* ===== Matrix Rain Canvas ===== */
+/* Keep everything as before — no changes needed here for blur */
 #matrix-canvas {
   position: fixed;
   top: 0;
@@ -39,7 +40,10 @@ body {
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  filter: blur(1.5px); /* subtle blur on canvas */
+  opacity: 0.08; /* dimmer overall */
 }
+
 
 /* ===== Hero Header ===== */
 .hero {
