@@ -13,7 +13,39 @@
     <!-- Your CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   </head>
+<canvas id="matrix-canvas"></canvas>
+<script>
+const canvas = document.getElementById("matrix-canvas");
+const ctx = canvas.getContext("2d");
+let width = canvas.width = window.innerWidth;
+let height = canvas.height = window.innerHeight;
 
+const columns = Math.floor(width / 20);
+const drops = Array(columns).fill(1);
+
+function draw() {
+  ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+  ctx.fillRect(0, 0, width, height);
+  
+  ctx.fillStyle = "#00ff00";
+  ctx.font = "16px monospace";
+  
+  drops.forEach((y, i) => {
+    const text = String.fromCharCode(0x30A0 + Math.random() * 96);
+    ctx.fillText(text, i * 20, y * 20);
+    
+    if (y * 20 > height && Math.random() > 0.975) drops[i] = 0;
+    drops[i]++;
+  });
+}
+
+setInterval(draw, 50);
+
+window.addEventListener("resize", () => {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+});
+</script>
   <body>
     <main class="markdown-body">
       {{ content }}
