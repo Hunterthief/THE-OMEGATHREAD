@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Piracy Aggregators Megathread
+title: THE-OMEGATHREAD
 ---
 
 {% include_relative README.md %}
