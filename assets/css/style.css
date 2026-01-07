@@ -60,9 +60,7 @@ body::before {
 .hero h1 {
   font-size: 3rem;
   letter-spacing: 0.08em;
-  text-shadow:
-    0 0 8px rgba(0,255,0,0.6),
-    0 0 18px rgba(0,255,0,0.4);
+  text-shadow: 0 0 8px rgba(0,255,0,0.6), 0 0 18px rgba(0,255,0,0.4);
   margin-bottom: 12px;
 }
 
@@ -87,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.3;
   margin-top: 2.4em;
   margin-bottom: 0.8em;
-  text-shadow: 0 0 6px rgba(0, 255, 0, 0.35);
+  text-shadow: 0 0 4px rgba(0, 255, 0, 0.3);
 }
 
 h1 {
@@ -109,6 +107,7 @@ h3 {
 /* ===== Text ===== */
 p {
   margin: 0.9em 0 1.3em;
+  text-shadow: none;
 }
 
 strong {
@@ -143,12 +142,13 @@ ul, ol {
 
 li {
   margin-bottom: 0.6em;
-  color: var(--text-main); /* list text color */
+  color: var(--text-main);
+  text-shadow: none;
 }
-
 
 li::marker {
   color: var(--accent);
+  text-shadow: none;
 }
 
 /* ===== Blockquotes ===== */
