@@ -1,11 +1,15 @@
-If you have any suggestions and recommendations or find any errors, feel free to open a request .
-# THE-OMEGATHREAD
+<div class="hero">
+  <h1>THE-OMEGATHREAD</h1>
+  <p>The last piracy index you’ll ever need.</p>
+</div>
 
 A curated list of major piracy aggregator sites and megathreads for discovering resources like streaming for anime, movies, TV, and more. Items with a 🌟 icon are my personal favorites based on reliability and comprehensiveness.
 
 If you have suggestions or find errors, consider contributing via relevant communities or repositories.
 
 ⚠️ users should prioritize safety with tools like VPNs and ad blockers. Always verify links, as sites can change or become unsafe.
+
+If you have any suggestions and recommendations or find any errors, feel free to open a request .
 
 # Piracy Aggregators
 ℹ️ These sites compile links to streaming, downloads, and tools across categories. Focus on ones with active communities for updates amid takedowns.
@@ -36,3 +40,7 @@ If you have suggestions or find errors, consider contributing via relevant commu
 
 #### Safety Notes
 ⚠️ Avoid unverified links; stick to community-vetted ones. Self-host VPNs (e.g., Wireguard) recommended for privacy during access.
+
+<footer class="site-footer">
+  <p>THE-OMEGATHREAD · Knowledge is meant to be free</p>
+</footer>
