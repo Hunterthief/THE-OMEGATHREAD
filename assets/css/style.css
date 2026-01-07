@@ -73,6 +73,10 @@ body {
   padding: 48px 24px 80px;
   position: relative;
   z-index: 1;
+
+  /* Center content on PC */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===== Headings ===== */
