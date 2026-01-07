@@ -10,7 +10,6 @@
 }
 
 /* ===== Base ===== */
-
 * {
   box-sizing: border-box;
 }
@@ -21,35 +20,74 @@ html {
 
 body {
   margin: 0;
-  background: radial-gradient(
-    circle at top,
-    #07120c 0%,
-    #030605 60%
-  );
+  background: radial-gradient(circle at top, #07120c 0%, #030605 60%);
   color: var(--text-main);
   font-family: system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Arial, sans-serif;
   line-height: 1.75;
   font-size: 16px;
+  position: relative;
+}
+
+/* ===== Matrix Rain Overlay ===== */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    rgba(0,255,0,0.04) 0px,
+    rgba(0,255,0,0.04) 1px,
+    transparent 2px,
+    transparent 6px
+  );
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* ===== Hero Header ===== */
+.hero {
+  text-align: center;
+  margin-bottom: 64px;
+  padding: 48px 24px;
+  background: linear-gradient(180deg, rgba(0, 255, 0, 0.08), transparent);
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 0.08em;
+  text-shadow:
+    0 0 8px rgba(0,255,0,0.6),
+    0 0 18px rgba(0,255,0,0.4);
+  margin-bottom: 12px;
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
 }
 
 /* ===== Layout ===== */
-
 .markdown-body {
   max-width: 980px;
   margin: 0 auto;
   padding: 48px 24px 80px;
+  position: relative;
+  z-index: 1;
 }
 
 /* ===== Headings ===== */
-
 h1, h2, h3, h4, h5, h6 {
   color: var(--accent);
   font-weight: 700;
   line-height: 1.3;
   margin-top: 2.4em;
   margin-bottom: 0.8em;
-  text-shadow: 0 0 6px rgba(0, 255, 136, 0.35);
+  text-shadow: 0 0 6px rgba(0, 255, 0, 0.35);
 }
 
 h1 {
@@ -69,7 +107,6 @@ h3 {
 }
 
 /* ===== Text ===== */
-
 p {
   margin: 0.9em 0 1.3em;
 }
@@ -83,7 +120,6 @@ em {
 }
 
 /* ===== Links ===== */
-
 a {
   color: var(--accent);
   text-decoration: none;
@@ -92,12 +128,11 @@ a {
 
 a:hover {
   color: var(--accent-hover);
-  text-shadow: 0 0 8px rgba(0, 255, 136, 0.6);
+  text-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
   text-decoration: underline;
 }
 
 /* ===== Lists ===== */
-
 ul, ol {
   padding-left: 1.6em;
   margin: 1em 0 1.6em;
@@ -105,29 +140,39 @@ ul, ol {
 
 li {
   margin-bottom: 0.6em;
+  position: relative;
+  padding-left: 0.3em;
 }
 
 li::marker {
   color: var(--accent);
 }
 
-/* ===== Blockquotes ===== */
+ul li::before {
+  content: ">";
+  color: var(--accent);
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+}
 
+/* ===== Blockquotes ===== */
 blockquote {
   margin: 1.6em 0;
   padding: 14px 22px;
-  background: linear-gradient(
-    135deg,
-    #08140e,
-    #050b08
-  );
+  background: linear-gradient(135deg, #08140e, #050b08);
   border-left: 4px solid var(--accent);
   color: var(--text-muted);
-  box-shadow: inset 0 0 12px rgba(0, 255, 136, 0.12);
+  box-shadow: inset 0 0 12px rgba(0, 255, 0, 0.12);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+blockquote:hover {
+  box-shadow: 0 0 24px rgba(0, 255, 0, 0.25);
+  transform: translateY(-2px);
 }
 
 /* ===== Code ===== */
-
 code {
   background: var(--code-bg);
   padding: 3px 6px;
@@ -137,16 +182,12 @@ code {
 }
 
 pre {
-  background: linear-gradient(
-    180deg,
-    #050f0a,
-    #030805
-  );
+  background: linear-gradient(180deg, #050f0a, #030805);
   padding: 18px;
   border-radius: 8px;
   overflow-x: auto;
   margin: 1.6em 0;
-  box-shadow: inset 0 0 16px rgba(0, 255, 136, 0.15);
+  box-shadow: inset 0 0 16px rgba(0, 255, 0, 0.15);
 }
 
 pre code {
@@ -156,7 +197,6 @@ pre code {
 }
 
 /* ===== Tables ===== */
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -171,22 +211,37 @@ th, td {
 th {
   background: #08150f;
   color: var(--accent);
-  text-shadow: 0 0 4px rgba(0, 255, 136, 0.4);
+  text-shadow: 0 0 4px rgba(0, 255, 0, 0.4);
 }
 
 /* ===== HR ===== */
-
 hr {
   border: none;
-  border-top: 1px solid var(--border-subtle);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #00ff00, transparent);
   margin: 52px 0;
 }
 
 /* ===== Images ===== */
-
 img {
   max-width: 100%;
   border-radius: 8px;
   margin: 1.6em 0;
-  box-shadow: 0 0 14px rgba(0, 255, 136, 0.15);
+  box-shadow: 0 0 14px rgba(0, 255, 0, 0.15);
+}
+
+/* ===== Text Selection ===== */
+::selection {
+  background: #00ff00;
+  color: #000;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  margin-top: 80px;
+  padding-top: 32px;
+  border-top: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  font-size: 0.9rem;
 }
