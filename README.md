@@ -1,5 +1,5 @@
 If you have any suggestions and recommendations or find any errors, feel free to open a request .
-# Piracy Aggregators Megathread
+# THE-OMEGATHREAD
 
 A curated list of major piracy aggregator sites and megathreads for discovering resources like streaming for anime, movies, TV, and more. Items with a 🌟 icon are my personal favorites based on reliability and comprehensiveness.
 
