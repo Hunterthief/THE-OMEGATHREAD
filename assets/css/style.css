@@ -132,21 +132,20 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== Lists (Markdown-friendly ">" bullets with glow) ===== */
+/* ===== Lists (Markdown-friendly ">" bullets) ===== */
 ul, ol {
   padding-left: 1.6em;
   margin: 1em 0 1.6em;
   list-style-type: ">";
   list-style-position: outside;
-  color: var(--accent); /* bullet color */
+  color: var(--accent);
 }
 
 li {
   margin-bottom: 0.6em;
   color: var(--text-main); /* list text color */
-  position: relative;
-  transition: color 0.2s ease;
 }
+
 
 li::marker {
   color: var(--accent);
