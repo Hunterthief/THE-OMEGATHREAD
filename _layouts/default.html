@@ -17,35 +17,40 @@
 <script>
 const canvas = document.getElementById("matrix-canvas");
 const ctx = canvas.getContext("2d");
+
 let width = canvas.width = window.innerWidth;
 let height = canvas.height = window.innerHeight;
 
-const columns = Math.floor(width / 20);
+// Smaller characters, more subtle
+const fontSize = 12; // smaller
+const columns = Math.floor(width / fontSize);
 const drops = Array(columns).fill(1);
 
 function draw() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+  // Slightly more transparent background for dimmer effect
+  ctx.fillStyle = "rgba(0, 0, 0, 0.15)";
   ctx.fillRect(0, 0, width, height);
   
   ctx.fillStyle = "#00ff00";
-  ctx.font = "16px monospace";
+  ctx.font = `${fontSize}px monospace`;
   
   drops.forEach((y, i) => {
     const text = String.fromCharCode(0x30A0 + Math.random() * 96);
-    ctx.fillText(text, i * 20, y * 20);
+    ctx.fillText(text, i * fontSize, y * fontSize);
     
-    if (y * 20 > height && Math.random() > 0.975) drops[i] = 0;
+    if (y * fontSize > height && Math.random() > 0.975) drops[i] = 0;
     drops[i]++;
   });
 }
 
-setInterval(draw, 50);
+setInterval(draw, 60); // slightly slower for subtlety
 
 window.addEventListener("resize", () => {
   width = canvas.width = window.innerWidth;
   height = canvas.height = window.innerHeight;
 });
 </script>
+
   <body>
     <main class="markdown-body">
       {{ content }}
