@@ -1,8 +1,3 @@
----
-layout: default
-title: THE-OMEGATHREAD
----
-
 If you have any suggestions and recommendations or find any errors, feel free to open a request .
 # Piracy Aggregators Megathread
 
