@@ -148,12 +148,6 @@ li {
   transition: color 0.2s ease;
 }
 
-/* Glow effect on hover for bullet and text */
-li:hover {
-  color: var(--accent-hover);
-  text-shadow: 0 0 6px var(--accent-hover), 0 0 12px var(--accent-hover);
-}
-
 li::marker {
   color: var(--accent);
 }
