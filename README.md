@@ -1,8 +1,5 @@
 <div class="hero">
   <h1>THE-OMEGATHREAD</h1>
-  <div style="text-align:center;">
-  <img alt="Omega" src="https://github.com/user-attachments/assets/0e0c4edd-3e83-4f68-aa4b-af34f1c49bf7" style="max-width:100%; height:auto;">
-  </div>
   <p>The last piracy index you’ll ever need.</p>
 </div>
 
