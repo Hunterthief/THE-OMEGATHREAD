@@ -27,23 +27,18 @@ body {
   line-height: 1.75;
   font-size: 16px;
   position: relative;
+  overflow-x: hidden;
 }
 
-/* ===== Matrix Rain Overlay ===== */
-body::before {
-  content: "";
+/* ===== Matrix Rain Canvas ===== */
+#matrix-canvas {
   position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image: repeating-linear-gradient(
-    0deg,
-    rgba(0,255,0,0.04) 0px,
-    rgba(0,255,0,0.04) 1px,
-    transparent 2px,
-    transparent 6px
-  );
-  opacity: 0.15;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: 0;
+  pointer-events: none;
 }
 
 /* ===== Hero Header ===== */
@@ -88,35 +83,14 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 0 4px rgba(0, 255, 0, 0.3);
 }
 
-h1 {
-  font-size: 2.3rem;
-  border-bottom: 2px solid var(--border-subtle);
-  padding-bottom: 12px;
-}
-
-h2 {
-  font-size: 1.75rem;
-  border-bottom: 1px solid var(--border-subtle);
-  padding-bottom: 8px;
-}
-
-h3 {
-  font-size: 1.4rem;
-}
+h1 { font-size: 2.3rem; border-bottom: 2px solid var(--border-subtle); padding-bottom: 12px; }
+h2 { font-size: 1.75rem; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px; }
+h3 { font-size: 1.4rem; }
 
 /* ===== Text ===== */
-p {
-  margin: 0.9em 0 1.3em;
-  text-shadow: none;
-}
-
-strong {
-  color: #eafff4;
-}
-
-em {
-  color: var(--text-muted);
-}
+p { margin: 0.9em 0 1.3em; text-shadow: none; }
+strong { color: #eafff4; }
+em { color: var(--text-muted); }
 
 /* ===== Links Only Glow ===== */
 a {
@@ -124,14 +98,13 @@ a {
   text-decoration: none;
   transition: color 0.15s ease, text-shadow 0.15s ease;
 }
-
 a:hover {
   color: var(--accent-hover);
   text-shadow: 0 0 8px rgba(0, 255, 0, 0.6);
   text-decoration: underline;
 }
 
-/* ===== Lists (Markdown-friendly ">" bullets) ===== */
+/* ===== Lists ===== */
 ul, ol {
   padding-left: 1.6em;
   margin: 1em 0 1.6em;
@@ -139,17 +112,12 @@ ul, ol {
   list-style-position: outside;
   color: var(--accent);
 }
-
 li {
   margin-bottom: 0.6em;
   color: var(--text-main); /* text does NOT glow */
   text-shadow: none;
 }
-
-li::marker {
-  color: var(--accent);
-  text-shadow: none;
-}
+li::marker { color: var(--accent); text-shadow: none; }
 
 /* ===== Blockquotes ===== */
 blockquote {
@@ -161,82 +129,26 @@ blockquote {
   box-shadow: inset 0 0 12px rgba(0, 255, 0, 0.12);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
-
-blockquote:hover {
-  box-shadow: 0 0 24px rgba(0, 255, 0, 0.25);
-  transform: translateY(-2px);
-}
+blockquote:hover { box-shadow: 0 0 24px rgba(0, 255, 0, 0.25); transform: translateY(-2px); }
 
 /* ===== Code ===== */
-code {
-  background: var(--code-bg);
-  padding: 3px 6px;
-  border-radius: 4px;
-  font-size: 0.95em;
-  color: #7affc2;
-}
-
-pre {
-  background: linear-gradient(180deg, #050f0a, #030805);
-  padding: 18px;
-  border-radius: 8px;
-  overflow-x: auto;
-  margin: 1.6em 0;
-  box-shadow: inset 0 0 16px rgba(0, 255, 0, 0.15);
-}
-
-pre code {
-  background: transparent;
-  padding: 0;
-  color: #9bffd3;
-}
+code { background: var(--code-bg); padding: 3px 6px; border-radius: 4px; font-size: 0.95em; color: #7affc2; }
+pre { background: linear-gradient(180deg, #050f0a, #030805); padding: 18px; border-radius: 8px; overflow-x: auto; margin: 1.6em 0; box-shadow: inset 0 0 16px rgba(0, 255, 0, 0.15); }
+pre code { background: transparent; padding: 0; color: #9bffd3; }
 
 /* ===== Tables ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.8em 0;
-}
-
-th, td {
-  border: 1px solid var(--border-subtle);
-  padding: 10px 12px;
-}
-
-th {
-  background: #08150f;
-  color: var(--accent);
-  text-shadow: 0 0 4px rgba(0, 255, 0, 0.4);
-}
+table { width: 100%; border-collapse: collapse; margin: 1.8em 0; }
+th, td { border: 1px solid var(--border-subtle); padding: 10px 12px; }
+th { background: #08150f; color: var(--accent); text-shadow: 0 0 4px rgba(0, 255, 0, 0.4); }
 
 /* ===== HR ===== */
-hr {
-  border: none;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #00ff00, transparent);
-  margin: 52px 0;
-}
+hr { border: none; height: 1px; background: linear-gradient(90deg, transparent, #00ff00, transparent); margin: 52px 0; }
 
 /* ===== Images ===== */
-img {
-  max-width: 100%;
-  border-radius: 8px;
-  margin: 1.6em 0;
-  box-shadow: 0 0 14px rgba(0, 255, 0, 0.15);
-}
+img { max-width: 100%; border-radius: 8px; margin: 1.6em 0; box-shadow: 0 0 14px rgba(0, 255, 0, 0.15); }
 
 /* ===== Text Selection ===== */
-::selection {
-  background: #00ff00;
-  color: #000;
-}
+::selection { background: #00ff00; color: #000; }
 
 /* ===== Footer ===== */
-.site-footer {
-  text-align: center;
-  margin-top: 80px;
-  padding-top: 32px;
-  border-top: 1px solid var(--border-subtle);
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
+.site-footer { text-align: center; margin-top: 80px; padding-top: 32px; border-top: 1px solid var(--border-subtle); color: var(--text-muted); font-size: 0.9rem; }
