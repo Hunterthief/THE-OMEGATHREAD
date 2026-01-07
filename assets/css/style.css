@@ -132,28 +132,30 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== Lists ===== */
+/* ===== Lists (Markdown-friendly ">" bullets with glow) ===== */
 ul, ol {
   padding-left: 1.6em;
   margin: 1em 0 1.6em;
+  list-style-type: ">";
+  list-style-position: outside;
+  color: var(--accent); /* bullet color */
 }
 
 li {
   margin-bottom: 0.6em;
+  color: var(--text-main); /* list text color */
   position: relative;
-  padding-left: 0.3em;
+  transition: color 0.2s ease;
+}
+
+/* Glow effect on hover for bullet and text */
+li:hover {
+  color: var(--accent-hover);
+  text-shadow: 0 0 6px var(--accent-hover), 0 0 12px var(--accent-hover);
 }
 
 li::marker {
   color: var(--accent);
-}
-
-ul li::before {
-  content: ">";
-  color: var(--accent);
-  margin-right: 10px;
-  position: absolute;
-  left: 0;
 }
 
 /* ===== Blockquotes ===== */
